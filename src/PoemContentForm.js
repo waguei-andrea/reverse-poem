@@ -49,11 +49,7 @@ class PoemContetForm extends Component {
         <Button className="is-primary" type="submit" value="Submit">
           Done!
         </Button>
-        {hasPoem ? (
-          <Button onClick={this.props.onToggleEditable}>Cancel</Button>
-        ) : (
-          ""
-        )}
+        {hasPoem ? <Button onClick={onToggleEditable}>Cancel</Button> : ""}
       </form>
     );
   }
