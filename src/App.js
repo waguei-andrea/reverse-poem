@@ -45,6 +45,8 @@ class App extends Component {
           transitionName="poem"
           transitionAppear={true}
           transitionAppearTimeout={500}
+          transitionEnter={false}
+          transitionLeave={false}
         >
           <div className="App-content">
             {this.state.editable

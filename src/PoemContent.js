@@ -3,15 +3,7 @@ import PropTypes from "prop-types";
 import _ from "lodash";
 import { CSSTransitionGroup } from "react-transition-group";
 import { Button } from "reactbulma";
-import {
-  Link,
-  DirectLink,
-  Element,
-  Events,
-  animateScroll as scroll,
-  scrollSpy,
-  scroller
-} from "react-scroll";
+import { scroller } from "react-scroll";
 
 class PoemContent extends Component {
   constructor(props, context) {
@@ -51,6 +43,8 @@ class PoemContent extends Component {
         transitionName="poem"
         transitionAppear={true}
         transitionAppearTimeout={500}
+        transitionEnter={false}
+        transitionLeave={false}
       >
         <div className="poem-container">
           <h1 className="poem-title">{title}</h1>
