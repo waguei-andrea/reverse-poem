@@ -1,10 +1,21 @@
 # Reverse Poem
-Demo: 
+Demo: https://waguei-andrea.github.io/reverse-poem/
 ## How to use
 
-### `yarn install`
+```sh
+git clone https://github.com/waguei-andrea/reverse-poem.git
+cd reverse-poem
+```
+
+install the packages this project need:
+```sh
+yarn install
+```
 after everything is installed, then:
-### `yarn start`
+```sh
+yarn start
+```
+
 then, browse http://localhost:3000/
 
 There it is! Enjoy it!
