@@ -44,7 +44,7 @@ class PoemContetForm extends Component {
           placeholder="Type your poem"
           onChange={this.handleContentChange}
           required={true}
-          rows={content && hasPoem && contetLen > 15 ? contetLen + 2 : 15}
+          rows={content && contetLen > 15 ? contetLen + 2 : 15}
         />
         <br />
         <Button className="is-primary" type="submit" value="Submit">
