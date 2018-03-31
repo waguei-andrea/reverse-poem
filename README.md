@@ -10,10 +10,12 @@ cd reverse-poem
 install the packages this project need:
 ```sh
 yarn install
+#or 'npm instal' if you didn't install yarn.
 ```
 after everything is installed, then:
 ```sh
 yarn start
+#or 'npm start' if you didn't install yarn.
 ```
 
 then, browse http://localhost:3000/
