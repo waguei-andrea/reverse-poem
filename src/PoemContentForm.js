@@ -27,6 +27,7 @@ class PoemContetForm extends Component {
   render() {
     const { title, content } = this.state;
     const { onToggleEditable, hasPoem } = this.props;
+    const contetLen = content.split(/\r\n|\r|\n/g).length;
     return (
       <form onSubmit={this.handleSubmit}>
         <input
@@ -43,7 +44,7 @@ class PoemContetForm extends Component {
           placeholder="Type your poem"
           onChange={this.handleContentChange}
           required={true}
-          rows={15}
+          rows={content && hasPoem && contetLen > 15 ? contetLen + 2 : 15}
         />
         <br />
         <Button className="is-primary" type="submit" value="Submit">
