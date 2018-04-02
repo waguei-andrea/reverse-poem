@@ -34,7 +34,7 @@ class PoemContent extends Component {
   }
 
   render() {
-    const { title, content } = this.props;
+    const { title, content, onToggleEditable } = this.props;
     const classname = this.state.reverse
       ? "poem-content-effect turn"
       : "poem-content-effect";
@@ -46,6 +46,11 @@ class PoemContent extends Component {
         transitionEnter={false}
         transitionLeave={false}
       >
+        <div className="poem-edit-container">
+          <Button onClick={onToggleEditable} className="App-edit">
+            Edit
+          </Button>
+        </div>
         <div className="poem-container">
           <h1 className="poem-title">{title}</h1>
           <div className="poem-content-container">
@@ -75,7 +80,8 @@ class PoemContent extends Component {
 
 PoemContent.propTypes = {
   title: PropTypes.string,
-  content: PropTypes.string
+  content: PropTypes.string,
+  toggleEditable: PropTypes.func
 };
 
 export default PoemContent;

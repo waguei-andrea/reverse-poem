@@ -1,10 +1,9 @@
 import React, { Component } from "react";
 import logo from "./logo.svg";
+import "./App.css";
 import PoemContentForm from "./PoemContentForm.js";
 import PoemContent from "./PoemContent.js";
-import "./App.css";
 import { CSSTransitionGroup } from "react-transition-group";
-import { Button } from "reactbulma";
 
 class App extends Component {
   constructor(props, context) {
@@ -49,32 +48,22 @@ class App extends Component {
           transitionLeave={false}
         >
           <div className="App-content">
-            {this.state.editable
-              ? this.renderEditMode()
-              : this.renderViewMode()}
+            <div className="App-content-container">
+              {this.state.editable ? (
+                <PoemContentForm
+                  {...this.state}
+                  onToggleEditable={this.toggleEditable}
+                  onUpdate={this.handleSubmit}
+                />
+              ) : (
+                <PoemContent
+                  {...this.state}
+                  onToggleEditable={this.toggleEditable}
+                />
+              )}
+            </div>
           </div>
         </CSSTransitionGroup>
-      </div>
-    );
-  }
-  renderViewMode() {
-    return (
-      <div className="App-content-container">
-        <Button onClick={this.toggleEditable} className="App-edit">
-          Edit
-        </Button>
-        <PoemContent {...this.state} />
-      </div>
-    );
-  }
-  renderEditMode() {
-    return (
-      <div className="App-content-container">
-        <PoemContentForm
-          {...this.state}
-          onToggleEditable={this.toggleEditable}
-          onUpdate={this.handleSubmit}
-        />
       </div>
     );
   }

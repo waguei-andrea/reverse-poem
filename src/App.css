@@ -68,12 +68,6 @@
   padding-top: 10px;
 }
 
-.App-edit {
-  position: absolute;
-  right: 30px;
-  top: 20px;
-}
-
 .button {
   margin: 0 20px;
 }
@@ -105,6 +99,14 @@
 }
 
 /*PoemContent*/
+.poem-edit-container {
+  text-align: right;
+}
+
+.App-edit {
+  top: 20px;
+}
+
 .poem-title{
   font-family: 'Playfair Display', serif;
   font-size: 3em;
